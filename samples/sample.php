@@ -4,5 +4,6 @@
 
   $finder = new \TheSeer\Tools\ClassFinder;
 
-  $rc = $finder->parseFile('src/classfinder.php');
-  var_dump($rc);
+  $rcount = $finder->parseFile('src/classfinder.php');
+  $rclasses = $finder->getClasses();
+  var_dump($rcount,$rclasses);

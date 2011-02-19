@@ -13,5 +13,6 @@
 
   $finder = new \TheSeer\Tools\ClassFinder;
 
-  $rc = $finder->parseMulti($scanner('../'));
-  var_dump($rc);
+  $rcount = $finder->parseMulti($scanner('../'));
+  $rclasses = $finder->getClasses();
+  var_dump($rcount,$rclasses);

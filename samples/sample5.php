@@ -13,7 +13,9 @@
 
   $finder = new \TheSeer\Tools\ClassFinder;
 
-  $found = $finder->parseMulti($scanner('../'));
+  $finder->parseMulti($scanner('../'));
+
+  $found = $finder->getClasses();
 
   $ab = new \TheSeer\Tools\AutoloadBuilder($found);
   $ab->setBaseDir(realpath(__DIR__.'/..'));

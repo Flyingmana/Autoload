@@ -14,6 +14,7 @@
   $finder = new \TheSeer\Tools\ClassFinder;
 
   $found = $finder->parseMulti($scanner('../'));
+  $found = $finder->getClasses();
 
   $ab = new \TheSeer\Tools\AutoloadBuilder($found);
   $ab->setIndent("\t");
